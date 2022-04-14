@@ -23,6 +23,9 @@ public class MarkdownParse {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
             else {
+                if (markdown.indexOf("(", currentIndex) == -1) {
+                    break;
+                }
                 // System.out.println("IMAGE DETECTED INDEX " + currentIndex);
             }
             
