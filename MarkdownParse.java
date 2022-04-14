@@ -17,7 +17,16 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
+            // System.out.println("CURRENT STRING " + markdown.substring(openParen + 1, closeParen));
+            if (markdown.indexOf("!", currentIndex) + 1 != markdown.indexOf("[", currentIndex)) {
+                // System.out.println("NOT IMAGE, ADDING INDEX " + currentIndex);
+                toReturn.add(markdown.substring(openParen + 1, closeParen));
+            }
+            else {
+                // System.out.println("IMAGE DETECTED INDEX " + currentIndex);
+            }
+            
+            
             currentIndex = closeParen + 1;
             // System.out.println("CURRENT INDEX: " + currentIndex);
         }
