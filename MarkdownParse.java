@@ -36,12 +36,12 @@ public class MarkdownParse {
                     toReturn.add(markdown.substring(openParen + 1, closeParen));
                 }
                 else {
-                    
                     // System.out.println("IMAGE DETECTED INDEX " + currentIndex);
                 }
                 
                 
                 currentIndex = closeParen + 1;
+                // COMMENT TO COMMIT NEW FILE
                 // System.out.println("CURRENT INDEX: " + currentIndex);
             }
             else {
