@@ -38,8 +38,6 @@ public class MarkdownParse {
                 else {
                     // System.out.println("IMAGE DETECTED INDEX " + currentIndex);
                 }
-                
-                
                 currentIndex = closeParen + 1;
                 // System.out.println("CURRENT INDEX: " + currentIndex);
             }
