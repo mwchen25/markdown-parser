@@ -100,4 +100,19 @@ public class MarkdownParseTest {
         ArrayList<String> expected = new ArrayList<String>();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void getLinkTest6() {
+        MarkdownParse parse = new MarkdownParse();
+
+        Path directory = Path.of("test-file-5.md");
+        ArrayList<String> actual = new ArrayList<String>();
+        try {
+            actual = parse.getLinks(Files.readString(directory));
+        }
+        catch (IOException e) {
+        }
+        ArrayList<String> expected = new ArrayList<String>();
+        assertEquals(expected, actual);
+    }
 }
