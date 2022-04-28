@@ -41,7 +41,6 @@ public class MarkdownParse {
                 
                 
                 currentIndex = closeParen + 1;
-                // COMMENT TO COMMIT NEW FILE
                 // System.out.println("CURRENT INDEX: " + currentIndex);
             }
             else {
